@@ -14,6 +14,7 @@ body {
 }
 
 
+
 /* 2. ETIQUETAS */
 h1, h2, h3 {
     margin-bottom: 19px;
@@ -22,21 +23,24 @@ h1, h2, h3 {
 }
 h1 {
     font-size: xx-large;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-bottom: 50px;
 }
 h2 {
     font-size: x-large;
-    padding-left: 25px;
+    padding-left: 50px;
 }
 h3 {
     font-size: large;
-    padding-left: 50px;
+    padding-left: 75px;
 }
 hr{
     margin-bottom: 40px;
     margin-top: 23px;
     margin-left: 23px;
     margin-right: 23px;
-    border: solid 1px solid c9d1d9;
+    border: solid 1px solid #c9d1d9;
 }
 strong {
     color: #e98145;
@@ -89,28 +93,31 @@ main{
     border-radius: 5px;
 } 
 main p, main li{
-        margin-left: 40px;
+        margin-left: 75px;
+        margin-right: 70px ;
         margin-bottom: 15px;      
 }
-section{
-    background-color: #02050ab2;
-    width: max-content;
-    border: 1px solid #c9d1d9;
-    border-radius: 5px;
-    margin: 0px;
-    padding-top: 10px;
+section pre{
+    margin-left: 75px;
+    margin-right: 50px;
+    padding-top: 50px;
 }
 article{
     margin-bottom: 50px;
+
 } 
 pre {
-    background-color: #010409!important;
+    margin-top: 0 !important;
+    padding: 30px;
+    width: max-content;
+    background-color: #010409!important;        /* Estos !important modifican estilos de la librería de colores VScode. no quitar */
+    border: 1px solid #c9d1d9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
     font-size: larger!important;
     color: #c9d1d9;
     overflow-x: auto;
-    width: max-content;
-    border-top: 1px solid #c9d1d9;
-    padding: 30px;
 }
 
 pre code {
@@ -121,7 +128,24 @@ pre code {
 }
 
 /* UTILIDADES */
-
+#index-main {
+    border: none;   
+}
+#index-main h1,
+#index-main h2,
+#index-main h3,
+#index-main p,
+#index-main li
+#index-main ul,
+#index-main ol {
+    padding-left: 0; 
+    margin-left: 75px;
+    font-weight: normal; 
+}
+#index-main ul,
+#index-main ol {
+    list-style: none;
+}
 .site-title {
     color: #f0f6fc;
     font-family: "Jersey 20", sans-serif;
@@ -134,7 +158,20 @@ pre code {
     width: 90px;
     height: auto;
 }
+.code-title{
+    margin-bottom: -1px;
+    margin-left: 75px;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    width: max-content;
+    background-color: #232a3485;
+    border: 1px solid #c9d1d9;
+    border-top-right-radius: 5px;    
+}
 .index{
+    margin-left: -1px;
     max-width: 75%;
     width: 300px;         
     min-width: 280px;      
@@ -142,7 +179,7 @@ pre code {
     background-color: #010409;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: large;
-    border:  1px solid #d8dee69a; 
+    border:  1px solid #c9d1d9; 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -156,7 +193,7 @@ pre code {
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
-.index a{
+.index a, main a{
     display: block;
     text-decoration: none;
     color: #33a2ec;
@@ -166,6 +203,20 @@ pre code {
     padding-left: 20px;
     cursor: pointer;
     transition: background-color 0.2s ease, fill 0.2s ease;
+}
+.index ol, .index ul {
+    list-style: none;
+}
+.title-list, .index-title{
+    display: block;
+    margin-top:10px;
+    padding-left: 17px;
+    padding-bottom: 7px;
+}
+.content-container {
+    display: flex;
+    gap: 0px;
+    padding: 0;
 }
 .index a:hover{
     border-radius: 10px;
@@ -181,17 +232,21 @@ pre code {
   margin-right: 8px;
   font-weight: bold;
 }
-.index ol, .index ul {
-    list-style: none;
+#index-no-icon a::before{
+    content:none
 }
-.title-list, .index-title{
-    display: block;
-    margin-top:10px;
-    padding-left: 17px;
-    padding-bottom: 7px;
+.code-title::before {
+  content: "<>";
+  color: #db6925;
+  font-size: x-large;
+  margin-right: 8px;
+  font-weight: bold;
 }
-.content-container {
-    display: flex;
-    gap: 0px;
-    padding: 0;
+.article-intro{
+  background-color: #232a3485;
+  padding: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 75px;
+  padding-right: 70px;
 }
